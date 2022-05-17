@@ -6,7 +6,6 @@ from MOEX.get_boards import get_boards
 from MOEX.get_columns_board import get_dict_columns
 from MOEX.get_marketdata_board import get_marketdata_board
 from MOEX.rgbi_index import get_RGBI_info
-from MOEX.update_obligation import get_OFZ_info
 
 
 

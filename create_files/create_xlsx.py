@@ -130,11 +130,12 @@ def do_excel(dict_RGBI,dict_all):
                 'тикер']
     xls_file(dict_RGBI, 'files/RGBI-full.xlsx')
     xls_file(dict_RGBI, 'files/RGBI-full-доходность последней сделки.xlsx', sort='Доходность пслд.сделки')
+    xls_file(dict_RGBI, 'files/RGBI-full-доходность последней сделки_на покупку.xlsx', sort='Доходность пслд.сделки', for_buy=list_buy)
     xls_file(dict_RGBI, 'files/RGBI-full-эффективная доходность.xlsx', sort='Эффективная доходность')
     xls_file(dict_RGBI, 'files/RGBI-full-эффективная доходность_на покупку.xlsx', sort='Эффективная доходность', for_buy=list_buy)
     print()
 
-    xls_file(dict_all, 'files/облигации-full.xlsx')
+    xls_file(dict_all, 'files/облигации-full.xlsx', for_buy=list_buy)
     xls_file(dict_all, 'files/облигации-full-доходность последней сделки.xlsx', sort='Доходность пслд.сделки')
     xls_file(dict_all, 'files/облигации-full-эффективная доходность.xlsx', sort='Эффективная доходность')
     xls_file(dict_all, 'files/облигации-листинг 1-эффективная доходность.xlsx', sort='Эффективная доходность', drop1=1)

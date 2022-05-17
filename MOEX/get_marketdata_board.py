@@ -7,7 +7,7 @@ def get_marketdata_board(dict_columns, dict_RGBI, dict_all, board='TQOB'):
     Получение двух словарей с индексом RGBI и всех облигаций в режиме торгов TQOB
     '''
     dict_RGBI
-    URL = f'https://iss.moex.com/iss/engines/stock/markets/bonds/boards/{board}/securities.json'#?iss.meta=off&iss.only=securities&securities'
+    URL = f'https://iss.moex.com/iss/engines/stock/markets/bonds/boards/{board}/securities.json'
     #  https://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQCB/securities.json
     response = requests.get(URL).json()
     for key in response.keys():

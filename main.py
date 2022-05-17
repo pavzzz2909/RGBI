@@ -14,6 +14,7 @@ from create_files.create_xlsx import do_excel
 
 
 if __name__ == '__main__':
+    time_start = datetime.now()
     dict_boards_T_plus, dict_boards_all = get_boards()
     dict_RGBI = get_RGBI_info()
     dict_all = {}
@@ -22,3 +23,5 @@ if __name__ == '__main__':
         dict_RGBI, dict_all = get_marketdata_board(dict_columns, dict_RGBI, dict_all, dict_boards_T_plus[board]['board'])
     do_excel(dict_RGBI, dict_all)
     print('Формирование файлов завершено')
+    time_end = datetime.now()
+    print(f'Время работы скрипта составило:  {time_end-time_start}')
